@@ -65,7 +65,7 @@ export default function PricingPage() {
                     <li className='text-sm leading-6 text-slate-700 flex'><ImCheckmark className='h-5 w-5 text-violet-700 shrink-0'/><span className='ml-3'>la liga comming soon...</span> </li> */}
 
                 </ul>
-                <Link href='/signup' className='mt-8 px-6 py-4 text-center text-sm font-semibold leading-4 rounded-lg text-white bg-violet-700  hover:bg-violet-800 block'>START WINING NOW!! </Link>
+                <Link href='/subscription' className='mt-8 px-6 py-4 text-center text-sm font-semibold leading-4 rounded-lg text-white bg-violet-700  hover:bg-violet-800 block'>START WINING NOW!! </Link>
             </div>
 
 

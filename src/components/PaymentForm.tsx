@@ -15,12 +15,6 @@ export default function PaymentForm({session, status}:any) {
     const stripe = useStripe();
     const elements = useElements();
 
-    // let defaultEmail; 
-    // if(status === 'authenticated'){
-    //   defaultEmail = session?.user.email
-    // } 
-
-
     const createSubscription = async () => {
         setIsDisabled(true)
     try{

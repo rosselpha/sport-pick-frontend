@@ -15,11 +15,11 @@ export default function Subsciption(){
 
     return(
       <>
-      <AuthGuard>
+      {/* <AuthGuard> */}
         <Elements stripe={stripePromise} >
           <PaymentForm  session={session} status={status}/>
         </Elements>
-      </AuthGuard>      
+      {/* </AuthGuard>       */}
 
       </>
 
