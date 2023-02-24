@@ -14,10 +14,21 @@ export default function Landing() {
     //ranProPics()
   }, [])
 
-  function handleSubmit(e: any) {
+  async function handleSubmit(e: any) {
     e.preventDefault();
     if (emailRef.current) {
-      // console.log(emailRef.current.value);
+
+      const response = await fetch('/api/email_list', {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: emailRef.current.value,
+  
+        }),
+    })
+    console.log(response);
       router.push(`/signup?email=${emailRef.current.value}`)
     }
   }
