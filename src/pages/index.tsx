@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import {useRouter} from 'next/router'
 
-import { getPosts } from '../lib/services/query'
+// import { getPosts } from '../lib/services/query'
 
 import Landing from '@/components/landing'
 import Home from '@/components/home'
@@ -59,14 +59,15 @@ export default function Main({posts}:any) {
     </>
   )
 }
-export async function getStaticProps() {
-  const posts = (await getPosts()) || []
 
-  return {
-    props: {
-      posts,
-    }
-  }
+// export async function getStaticProps() {
+//   const posts = (await getPosts()) || []
 
-}
+//   return {
+//     props: {
+//       posts,
+//     }
+//   }
+
+// }
 
