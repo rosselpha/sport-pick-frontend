@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 
 export default function PricingPage() {
-  return (
+    return (
     <>
         <div className='mx-auto max-w-7xl bg-white px-4 pt-24 sm:px-6 lg:px-8 text-center '>
             <h2 className='text-3xl font-extrabold text-black sm:text-5xl sm:leading-tight sm:tracking-tight'> Pricing plans for daily or monthly.</h2>
@@ -27,6 +27,7 @@ export default function PricingPage() {
                 <div className="-mx-6 mt-4 rounded-lg bg-slate-50 p-6">
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
+                        <span className='ml-3 text-4xl text-slate-600 line-through'>$200</span>
                         <span className='ml-3 text-4xl text-slate-900'>$ 57</span> 
                         <span className=' ml-1.5'>/ daily</span>
                     </p>
@@ -46,11 +47,12 @@ export default function PricingPage() {
                 <h3 className='text-lg font-semibold leading-5'> Pick's for the Month </h3>
                 <p className="mt-4 text-slate-700 text-sm leading-6"> this is the package for exlusive plays VIP game and with our most powerful model plus data analize. when the AI favor 3 team they will be sent as a special parley.</p>
                 <p className=" text-sm leading-6 bg-violet-700 -translate-y-1/2  absolute top-0 text-white px-3 py-0.5 rounded-full font-semibold tracking-wide shadow-md ">Most popular</p>
-                
+
                 <div className="-mx-6 mt-4 rounded-lg bg-slate-50 p-6">
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
-                        <span className='ml-3 text-4xl text-slate-900'>$ 257</span> 
+                        <span className='ml-3 text-4xl text-slate-600 line-through'>$549</span>                         
+                        <span className='ml-3 text-4xl text-slate-900 '>$ 257</span> 
                         <span className=' ml-1.5'>/ monthly</span>
                     </p>
                 </div>
