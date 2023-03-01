@@ -14,6 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <script src="https://my.rtmark.net/p.js?f=sync&lr=1&partner=23abd509f4776f8c0a915922778aac1d10dafe702e11e8827e181e149c39f128" defer></script>
+      <noscript><img src="https://my.rtmark.net/img.gif?f=sync&lr=1&partner=23abd509f4776f8c0a915922778aac1d10dafe702e11e8827e181e149c39f128" width="1" height="1" /></noscript>
     </SessionProvider>
 
   )

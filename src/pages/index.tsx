@@ -20,6 +20,7 @@ function User({session, router, posts}:any){
 
   // console.log(posts)
   return(
+    
     <div className="h-screen">
       <div className=' px-4 text-center py-10'>
         <h2>{session.user.email}</h2>
