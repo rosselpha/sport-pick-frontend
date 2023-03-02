@@ -42,11 +42,11 @@ export default function Landing({props}:any) {
   <section className="h-full max-h-640px mb-8 x1:mb-24">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:ml-8 xl:ml-135px flex flex-col items-center lg:items-start text-center lg:text-left justify-center flex-1 px-4 lg:px-0">
-            <h1 className="text-4xl lg:text-58px font-semibold leading-none mb-6">
-              Accurate Soccer Predictions <span className="text-violet-700">AI</span>
+            <h1 className="text-4xl lg:text-50px font-semibold leading-none mb-6">
+              START BEATING THE SPORTSBOOKS WITH <span className="text-violet-700">AI</span>
             </h1>
             <p className="max-w-480px mb-8">
-              Get ahead of the game with our AI-powered soccer prediction system. We analyze vast amounts of data to provide the most accurate predictions possible. Trust in data and AI technology to make more informed decisions and achieve better results.
+              Get ahead of the game with our AI-powered SPORT prediction system. We analyze vast amounts of data to provide the most accurate predictions possible. Trust in data and AI technology to make more informed decisions and achieve better results.
             </p>
             <form onSubmit={handleSubmit}>
               <input className="border border-gray-300 focus:border-violet-700 outline-none rounded px-4 h-14 mx-2" type='email' placeholder="Enter your email..."  name="email" ref={emailRef}/>
