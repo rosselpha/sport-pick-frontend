@@ -50,7 +50,9 @@ export default function Landing({props}:any) {
             </p>
             <form onSubmit={handleSubmit}>
               <input className="border border-gray-300 focus:border-violet-700 outline-none rounded px-4 h-14 mx-2" type='email' placeholder="Enter your email..."  name="email" ref={emailRef}/>
-              <button className="bg-violet-700 hover:bg-violet-800 text-white px-4 py-5 rounded-lg transition">GET TODAY'S PICKS</button>
+
+              <button className="bg-violet-700 hover:bg-violet-800 text-white px-4 py-5 rounded-lg transition ">GET TODAY'S PICKS</button>
+
             </form>
           </div>
           <div className="hidden flex-1 lg:flex justify-end items-end">
