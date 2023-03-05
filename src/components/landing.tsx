@@ -1,20 +1,20 @@
 import Image from "next/image"
 import React, { useEffect, useRef } from 'react'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 import Link from "next/link"
 import Testimonial from "./testimonial"
 import AboutPricing from "./about-pricing"
 import PostCard from "./PostCard"
 
-export default function Landing({props}:any) {
+export default function Landing({ props }: any) {
 
-  const  posts  = props
+  const posts = props
   // console.log(posts)
-  
+
   const router = useRouter()
 
-  const emailRef  = useRef<HTMLInputElement>(null)
-  
+  const emailRef = useRef<HTMLInputElement>(null)
+
   useEffect(() => {
     //ranProPics()
   }, [])
@@ -25,21 +25,21 @@ export default function Landing({props}:any) {
 
       const response = await fetch('/api/email_list', {
         method: 'POST',
-        headers: { 
-            'Content-Type': 'application/json',
+        headers: {
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            email: emailRef.current?.value,
-  
+          email: emailRef.current?.value,
+
         }),
-    })
+      })
       router.push(`/signup?email=${emailRef.current?.value}`)
     }
   }
-  
+
   return (
     <>
-  <section className="h-full max-h-640px mb-8 x1:mb-24">
+      <section className="h-full max-h-640px mb-8 x1:mb-24">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:ml-8 xl:ml-135px flex flex-col items-center lg:items-start text-center lg:text-left justify-center flex-1 px-4 lg:px-0">
             <h1 className="text-4xl lg:text-50px font-semibold leading-none mb-6">
@@ -49,7 +49,7 @@ export default function Landing({props}:any) {
               Get ahead of the game with our AI-powered SPORT prediction system. We analyze vast amounts of data to provide the most accurate predictions possible. Trust in data and AI technology to make more informed decisions and achieve better results.
             </p>
             <form onSubmit={handleSubmit}>
-              <input className="border border-gray-300 focus:border-violet-700 outline-none rounded px-4 h-14 mx-2" type='email' placeholder="Enter your email..."  name="email" ref={emailRef}/>
+              <input className="border border-gray-300 focus:border-violet-700 outline-none rounded px-4 h-14 mx-2" type='email' placeholder="Enter your email..." name="email" ref={emailRef} />
 
               <button className="bg-violet-700 hover:bg-violet-800 text-white px-4 py-5 rounded-lg transition ">GET TODAY'S PICKS</button>
 
@@ -68,14 +68,12 @@ export default function Landing({props}:any) {
           </div>
         </div>
       </section>
-
       <section>
         <AboutPricing />
-      </section>      
+      </section>
       <section>
         <Testimonial />
       </section>
-
     </>
   )
 }

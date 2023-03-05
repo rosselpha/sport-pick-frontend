@@ -10,6 +10,11 @@ async function handleEmailList(req:any, res:any) {
         const {email} = req.body
         const emailList = new EmailList({email})
         await emailList.save()
+        const allEmailList = EmailList.find();(await allEmailList).map(list =>{
+            console.log(list.email)
+        })
+        // console.log(allEmailList)
+
         return res.json({message: "Thank you for subscribing!"})
     } else {
         return res.status(500).json({error: "  HTTP method not valid only POST Accepted!"})
