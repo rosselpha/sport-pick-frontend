@@ -52,7 +52,7 @@ export default function PaymentForm({session, status}:any) {
                 router.push('/success');
                 
             }else{
-                router.push('/subscription');
+                router.push('/fail');
                 console.log('fail');
                 setIsDisabled(false)
             }
