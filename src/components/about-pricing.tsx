@@ -28,7 +28,7 @@ export default function PricingPage() {
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
                         <span className='ml-3 text-3xl text-slate-600 line-through'>$200</span>
-                        <span className='ml-3 text-4xl text-slate-900'>$ 57</span> 
+                        <span className='ml-3 text-2xl text-slate-900'>$ 57</span> 
                         <span className=' ml-1.5'>/ daily</span>
                     </p>
                 </div>
@@ -57,8 +57,8 @@ export default function PricingPage() {
                 <div className="-mx-6 mt-4 rounded-lg bg-slate-50 p-6">
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
-                        <span className='ml-3 text-3xl text-slate-600 line-through'>$549</span>                         
-                        <span className='ml-3 text-4xl text-slate-900 '>$ 257</span> 
+                        <span className='ml-3 text-3xl text-slate-600 line-through'>$1549</span>                         
+                        <span className='ml-3 text-2xl text-slate-900 '>$ 257</span> 
                         <span className=' ml-1.5'>/ monthly</span>
                     </p>
                 </div>

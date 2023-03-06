@@ -11,7 +11,7 @@ async function handleEmailList(req:any, res:any) {
         const emailList = new EmailList({email})
         await emailList.save()
         const allEmailList = EmailList.find();(await allEmailList).map(list =>{
-            console.log(list.email)
+            // console.log(list.email)
         })
         // console.log(allEmailList)
 

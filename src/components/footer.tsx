@@ -7,8 +7,11 @@ export default function Footer() {
                 Copyright &copy; 2023 BlockPlay. All rights reserved.
             </div>
             <div className="container">
-                <Link href="mailto:support@blockplay.me" className="hover:text-black">contact us</Link>
-                <br />
+                <div>
+                    <Link href="mailto:support@blockplay.me" className="hover:text-black">contact us</Link>
+
+                </div>
+                
 
                 <Link href="/refund" className="hover:text-black">refund policy</Link>
                     <span>
