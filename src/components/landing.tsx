@@ -72,7 +72,7 @@ export default function Landing({ props }: any) {
         <AboutPricing />
       </section>
       <section>
-        <Testimonial />
+        {/* <Testimonial /> */}
       </section>
     </>
   )

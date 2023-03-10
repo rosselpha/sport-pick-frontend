@@ -11,7 +11,7 @@ export default function Header() {
     const { data: session, status } = useSession()
     const { pathname } = useRouter()
 
-const email = session?.user.email
+const email = session?.user?.email
 const username = email?.slice(0, email.indexOf('@'))
 
 function logoutHandler(){

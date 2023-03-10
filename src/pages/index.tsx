@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 function User({session, router, posts}:any){
 
-  //console.log(session)
+  console.log(session)
   function routerChanger(){
     router.push('/subscription')
   }

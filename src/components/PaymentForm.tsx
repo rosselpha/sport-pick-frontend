@@ -28,7 +28,7 @@ export default function PaymentForm({session, status}:any) {
             });
 
             // console.log(paymentMethod?.paymentMethod);
-            const response = await fetch(url+'/stripe/create-subscription', {
+            const response = await fetch('api/stripe/subscription', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -82,21 +82,22 @@ export default function PaymentForm({session, status}:any) {
 
           <p className="text-2xl font-medium tracking-tight text-gray-900">
             <span className='ml-3 text-4xl text-slate-600 line-through'>$1549</span>    
-            <span className='ml-3 text-3xl text-slate-900 '>$ 257</span> 
+            <span className='ml-3 text-3xl text-slate-900 '>$ 67</span> 
             <span className=' ml-1.5'>/ monthly</span>
 
           </p>
+
           <p className="mt-1 text-sm text-gray-600">This is the package for exlusive plays VIP games and with our most powerful model plus data analize. SPOTS ARE Limited.</p>
-          <p>                 <ul className='mt-6 space-y-6 flex-1'>
-                    <li className='text-sm leading-6 text-slate-700 flex'><span className='ml-3'>NBA PICKS, </span> <span className='ml-3'>NHL PICKS, </span><span className='ml-3'>NFL PICKS</span>  </li>
-                    <li className='text-sm leading-6 text-slate-700 flex'><span className='ml-3'>SOCCER,</span><span className='ml-3'>Champions League </span> </li>
+          <>                 <ul className='mt-6 space-y-6 flex-1'>
+                    {/* <li className='text-sm leading-6 text-slate-700 flex'><span className='ml-3'>NBA PICKS, </span> <span className='ml-3'>NHL PICKS, </span><span className='ml-3'>NFL PICKS</span>  </li> */}
+                    <li className='text-sm leading-6 text-slate-700 flex'><span className='ml-3'>SOCCER,</span><span className='ml-3'>Champions League, Premier league</span> </li>
                     <li className='text-sm leading-6 text-slate-700 flex'><span className='ml-3'>Daily Picks,</span><span className='ml-3'>At least ONE Moon Shot Parlay A Week </span>  </li>
                     {/* <li className='text-sm leading-6 text-slate-700 flex'><ImCheckmark className='h-5 w-5 text-violet-700 shrink-0'/><span className='ml-3'>game prediction </span> </li> */}
                     <li className='text-sm leading-6 text-slate-700 flex'></li>
                     {/* <li className='text-sm leading-6 text-slate-700 flex'><ImCheckmark className='h-5 w-5 text-violet-700 shrink-0'/><span className='ml-3'>bundesliga comming soon...</span> </li>
                     <li className='text-sm leading-6 text-slate-700 flex'><ImCheckmark className='h-5 w-5 text-violet-700 shrink-0'/><span className='ml-3'>la liga comming soon...</span> </li> */}
 
-                </ul></p>
+                </ul></>
         </div>
 
  

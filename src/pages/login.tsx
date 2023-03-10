@@ -3,22 +3,17 @@ import { useRef } from "react"
 import {signIn } from 'next-auth/react';
 import { useRouter } from "next/router";
 
-const url = process.env.NEXT_PUBLIC_API_URL as string;
+// const url = process.env.NEXT_PUBLIC_API_URL as string;
 
 async function loginUser(email: string, password: string) {
 
-  const response = await fetch(url+'/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-  })
-  const data = await response.json()
-  if(!response.ok) {
-      throw new Error(data.message || 'Something went wrong')
-  }
-  return data
+
+  
+  // const data = await response.json()
+  // if(!response.ok) {
+  //     throw new Error(data.message || 'Something went wrong')
+  // }
+  // return data
 }
 
 
@@ -39,7 +34,8 @@ export default function Auth() {
         email: enteredEmail,
         password: enteredPassword,
       })
-      const data = await loginUser(enteredEmail, enteredPassword)
+      console.log(result)
+      // const data = await loginUser(enteredEmail, enteredPassword)
       //console.log(data)
       console.log(result)
       if(result?.ok === false) {
@@ -67,6 +63,9 @@ export default function Auth() {
             </div>
             <button type="submit" className="bg-[#5b21b6] rounded-xl text-white py-2 hover:scale-105 duration-300" >Login</button>
           </form>
+          <div className="mt-5 text-xs text-[#5b21b6] hover:cursor-pointer">
+            <Link href='/reset'>resset password</Link>
+          </div>
           <div className="mt-5 text-xs border-b border-[#5b21b6] py-4 text-[#5b21b6]" />
 
           <div className="mt-3 text-xs flex justify-between items-center text-[#5b21b6]">

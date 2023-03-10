@@ -16,15 +16,16 @@ const Checkout = () => {
     
   async function handleCheckout() {
 
-    const response = await fetch(url+'/stripe/create-checkout-session', {
+    const response = await fetch('api/stripe/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       }});
+      console.log(response)
     const { id } = await response.json();
    
     setSessionId(id);
-    stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_TEST_KEY as string);
+    stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
     // console.log( sessionId );
 
     if(!sessionId){
@@ -47,7 +48,7 @@ const Checkout = () => {
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
                         <span className='ml-3 text-4xl text-slate-600 line-through'>$200</span>
-                        <span className='ml-3 text-4xl text-slate-900'>$ 57</span> 
+                        <span className='ml-3 text-4xl text-slate-900'>$ 40</span> 
                         <span className=' ml-1.5'>/ daily</span>
                     </p>
                 </div>

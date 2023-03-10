@@ -1,6 +1,9 @@
 import NextAuth from 'next-auth/next';
 import GoogleProvider from "next-auth/providers/google";
-import axios from 'axios';
+import connectToDB from '@/lib/utils/db'
+import { hashPassword, verifyPassword } from '@/lib/utils/auth'
+
+import User  from '@/lib/models/user'
 
 import CredentialsProvider from "next-auth/providers/credentials";
 // import { User } from 'next-auth/core/types';
@@ -9,70 +12,46 @@ const url = process.env.NEXT_PUBLIC_API_URL as string;
 
 
 export default NextAuth({
+
     providers: [
-        // GoogleProvider({
-        //     clientId: process.env.GOOGLE_CLIENT_ID!,
-        //     clientSecret: process.env.GOOGLE_CLIENT_SECRET!
-        // })
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID!,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET!
+        }),
         CredentialsProvider({
-            name: 'Custom Provider',
+            name: 'credentials',
             credentials: {
                 email: { label: "Email", type: "email" },
                 password: {  label: "Password", type: "password" }
             },
-            async authorize(credentials) {
+            async authorize(credentials, req) {
+                await connectToDB().catch(err => console.log({error: err.message}))
 
-            const res = await fetch(url+'/auth/login' , {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(credentials),
-              }); 
-                const data = await res.json();
-                if (data) {
+                if(credentials?.email && credentials.password){
 
-                    //console.log(data)
-                    return data
-                  } else {
-                    return null
+                    const existingUser = await User.findOne({email:credentials.email}).exec();
+
+                    // console.log(existingUser)
+                    if(existingUser===null|| !existingUser ) throw new Error("user does not exsist")
+
+                    const isValid = await verifyPassword(credentials.password, existingUser.password )
+                    
+                    if(!isValid) throw new Error("could not log you in");
+
+                    return existingUser
                 }
             } 
         })
     ],
     secret: process.env.JWT_SECRET,
-    
-    callbacks: { 
-
-        async jwt({token, user, account, profile, isNewUser}) { 
-
-            if (user) {
-                const newToken = {
-                accessToken: user.token,
-                id: user.user.id,
-                useremail: user.user.email,
-                username: user.user.username,
-
-                };
-                //console.log(user)
-                return newToken;
-            }     
-            //console.log(token)   
-            return token;
+    callbacks: {
+        async jwt({token, user, account, isNewUser}){
+            return token
         },
-        async session({session, token, user}){
-
-            //session = token.accessToken;
-            session.accessToken = token.accessToken as string;
-            session.id = token.id as string;
-            session.user.email = token.useremail as string;
-            session.user.username = token.username as string;
-
-            
-            //user = await axios.get(url+'/auth/me', {}).then(res => res.data);
-
+        async session({session, token, user}) {
 
             return session
-        },
-    },
-   
+        }
+    }
 })
 
