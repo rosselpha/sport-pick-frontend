@@ -1,5 +1,5 @@
 import React from 'react'
-import {ImCheckmark, ImCross} from "react-icons/im"
+import { ImCheckmark, ImCross } from "react-icons/im"
 import Link from 'next/link'
 
 
@@ -10,8 +10,7 @@ export default function PricingPage() {
         <div className='mx-auto max-w-7xl bg-white px-4 pt-24 sm:px-6 lg:px-8 text-center '>
             <h2 className='text-3xl font-extrabold text-black sm:text-5xl sm:leading-tight sm:tracking-tight'> Pricing plans for daily or monthly.</h2>
             <p className='mt-4 text-lg text-slate-500 '>
-                If you are looking for a one time puchase, you can get our one time purchase for $40. If you are looking for a monthly subscription, you can get our monthly subscription for $67 per month.
-                comming soon is the next teir  with a yearly plan with the ultimate trainde AI model base on all seasons and our current model. Our ai model comes up with amazing parlay picks for maximum profit. 
+            If you want a one-time purchase, you can get our one-time purchase for $40. If you want a monthly subscription, you can get our monthly subscription for $67 per month. Coming soon is the next tier with a yearly plan with the ultimate training AI model base on all seasons and our current model. Our ai model comes up with amazing parlay picks for maximum profit.
             </p>
         </div>
 
@@ -20,8 +19,8 @@ export default function PricingPage() {
 
             <div className="relative boder border-slate-200 p-8 shadow-lg bg-white rounded-2xl flex-col">
 
-                <h3 className='text-lg font-semibold leading-5'>    One DayPicks </h3>
-                <p className="mt-4 text-slate-700 text-sm leading-6"> In this pacage you get the pick the model came up with as the most likely team to win</p>
+                <h3 className='text-lg font-semibold leading-5'>    One Day Picks </h3>
+                <p className="mt-4 text-slate-700 text-sm leading-6"> In this package you get the pick the model came up with as the most likely team to win</p>
                 {/* <p className=" text-sm leading-6 bg-violet-700 -translate-y-1/2  absolute top-0 text-white px-3 py-0.5 rounded-full font-semibold tracking-wide shadow-md ">Most popular</p> */}
                 
                 <div className="-mx-6 mt-4 rounded-lg bg-slate-50 p-6">
@@ -50,8 +49,8 @@ export default function PricingPage() {
 
 
             <div className="relative boder border-slate-200 p-8 shadow-lg bg-white rounded-2xl flex-col">
-                <h3 className='text-lg font-semibold leading-5'> Pick's for the Month </h3>
-                <p className="mt-4 text-slate-700 text-sm leading-6"> This is the package for exlusive plays VIP game and with our most powerful model plus data analize. when the AI favor 3 team they will be sent as a special parley.</p>
+                <h3 className='text-lg font-semibold leading-5'> Daily Pick For A Month</h3>
+                <p className="mt-4 text-slate-700 text-sm leading-6"> This is the package for exclusive plays VIP games with our most powerful model plus data analysis. when the AI favors 3 teams they will be sent as a special parley.</p>
                 <p className=" text-sm leading-6 bg-violet-700 -translate-y-1/2  absolute top-0 text-white px-3 py-0.5 rounded-full font-semibold tracking-wide shadow-md ">Most popular</p>
 
                 <div className="-mx-6 mt-4 rounded-lg bg-slate-50 p-6">

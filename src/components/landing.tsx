@@ -46,8 +46,7 @@ export default function Landing({ props }: any) {
               START BEATING THE SPORTSBOOKS WITH <span className="text-violet-700">AI</span>
             </h1>
             <p className="max-w-480px mb-8">
-              Get ahead of the game with our AI-powered SPORT prediction system. We analyze vast amounts of data to provide the most accurate predictions possible. Trust in data and AI technology to make more informed decisions and achieve better results.
-            </p>
+            Get ahead of the game with our AI-powered SPORT prediction system. We analyze vast amounts of data to provide the most accurate predictions possible. Trust in data and AI technology to make more informed decisions and achieve better results            </p>
             <form onSubmit={handleSubmit}>
               <input className="border border-gray-300 focus:border-violet-700 outline-none rounded px-4 h-14 mx-2" type='email' placeholder="Enter your email..." name="email" ref={emailRef} />
 
