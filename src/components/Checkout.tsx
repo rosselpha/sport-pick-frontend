@@ -48,7 +48,7 @@ const Checkout = () => {
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
                         <span className='ml-3 text-4xl text-slate-600 line-through'>$200</span>
-                        <span className='ml-3 text-4xl text-slate-900'>$ 40</span> 
+                        <span className='ml-3 text-4xl text-slate-900'>$ 19</span> 
                         <span className=' ml-1.5'>/ daily</span>
                     </p>
                 </div>

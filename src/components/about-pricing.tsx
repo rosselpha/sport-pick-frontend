@@ -10,7 +10,7 @@ export default function PricingPage() {
         <div className='mx-auto max-w-7xl bg-white px-4 pt-24 sm:px-6 lg:px-8 text-center '>
             <h2 className='text-3xl font-extrabold text-black sm:text-5xl sm:leading-tight sm:tracking-tight'> Pricing plans for daily or monthly.</h2>
             <p className='mt-4 text-lg text-slate-500 '>
-            If you want a one-time purchase, you can get our one-time purchase for $40. If you want a monthly subscription, you can get our monthly subscription for $67 per month. Coming soon is the next tier with a yearly plan with the ultimate training AI model base on all seasons and our current model. Our ai model comes up with amazing parlay picks for maximum profit.
+            If you want a one-time purchase, you can get our one-time purchase for $19. If you want a monthly subscription, you can get our monthly subscription for $67 per month. Coming soon is the next tier with a yearly plan with the ultimate training AI model base on all seasons and our current model. Our ai model comes up with amazing parlay picks for maximum profit.
             </p>
         </div>
 
@@ -27,7 +27,7 @@ export default function PricingPage() {
                     <p className=' flex items-center text-sm font-semibold text-slate-500 '>
                         <span >USD</span>
                         <span className='ml-3 text-3xl text-slate-600 line-through'>$200</span>
-                        <span className='ml-3 text-2xl text-slate-900'>$ 40</span> 
+                        <span className='ml-3 text-2xl text-slate-900'>$ 19</span> 
                         <span className=' ml-1.5'>/ daily</span>
                     </p>
                 </div>
